@@ -1,0 +1,61 @@
+EFReport.txt
+
+Sample: C# Method GetRobotCommands:
+
+GetRobotCommands:
+Executed DbCommand (XXms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT r.createddate, r.description, r.id, r.ismovecommand, r.modifieddate, r.name
+FROM robotcommand AS r;
+
+
+
+GetRobotCommandById:
+Executed DbCommand (XXms) [Parameters=[@__id_0='1'], CommandType='Text', CommandTimeout='30']
+SELECT r.createddate, r.description, r.id, r.ismovecommand, r.modifieddate, r.name
+FROM robotcommand AS r
+WHERE r.id = @__id_0;
+
+AddRobotCommand:
+Executed DbCommand (XXms) [Parameters=[@p0='2024-08-22T00:21:19', @p1=NULL, @p2='True', @p3='2024-08-22T00:21:19', @p4='MOVE'], CommandType='Text', CommandTimeout='30']
+INSERT INTO robotcommand (createddate, description, ismovecommand, modifieddate, name)
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING id;
+
+UpdateRobotCommand:
+Executed DbCommand (XXms) [Parameters=[@p0='UpdatedName', @p1='UpdatedDesc', @p2='True', @p3='2024-08-22T00:25:00', @p4='1'], CommandType='Text', CommandTimeout='30']
+UPDATE robotcommand
+SET name = @p0, description = @p1, ismovecommand = @p2, modifieddate = @p3
+WHERE id = @p4;
+
+DeleteRobotCommand:
+Executed DbCommand (XXms) [Parameters=[@p0='1'], CommandType='Text', CommandTimeout='30']
+DELETE FROM robotcommand
+WHERE id = @p0;
+
+GetMaps:
+Executed DbCommand (XXms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT m.id, m.name, m.description, m.rows, m.columns, m.createddate, m.modifieddate
+FROM map AS m;
+
+GetMapById:
+Executed DbCommand (XXms) [Parameters=[@__id_0='1'], CommandType='Text', CommandTimeout='30']
+SELECT m.id, m.name, m.description, m.rows, m.columns, m.createddate, m.modifieddate
+FROM map AS m
+WHERE m.id = @__id_0;
+
+AddMap:
+Executed DbCommand (XXms) [Parameters=[@p0='TestMap', @p1='Description', @p2='5', @p3='5', @p4='2024-08-22T00:21:19', @p5='2024-08-22T00:21:19'], CommandType='Text', CommandTimeout='30']
+INSERT INTO map (name, description, rows, columns, createddate, modifieddate)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5)
+RETURNING id;
+
+UpdateMap:
+Executed DbCommand (XXms) [Parameters=[@p0='UpdatedMap', @p1='UpdatedDesc', @p2='10', @p3='10', @p4='2024-08-22T00:25:00', @p5='1'], CommandType='Text', CommandTimeout='30']
+UPDATE map
+SET name = @p0, description = @p1, rows = @p2, columns = @p3, modifieddate = @p4
+WHERE id = @p5;
+
+DeleteMap:
+Executed DbCommand (XXms) [Parameters=[@p0='1'], CommandType='Text', CommandTimeout='30']
+DELETE FROM map
+WHERE id = @p0;

@@ -1,0 +1,2377 @@
+{
+  "collection": {
+    "_": {
+      "postman_id": "cd6031cc-d793-4102-9264-a36148e42134",
+      "exporter_id": "52790459",
+      "collection_link": "https://go.postman.co/collection/52790459-cd6031cc-d793-4102-9264-a36148e42134?source=collection_link"
+    },
+    "item": [
+      {
+        "id": "2859ff1d-f2a2-4784-9ac6-ba77bdfb8f62",
+        "name": "maps",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "maps"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "f4a28e75-c0b1-444c-a4d0-7198d08658c2",
+        "name": "coordinate on the map",
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "eec6fa04-0733-4b3b-b23e-a1bfe8fc57f1",
+        "name": "outside map",
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "37a76e97-b4ea-432b-91a0-78b445da7fcb",
+        "name": "invalid coordinates",
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "34019739-7748-4be6-ac39-8054bcc9932f",
+        "name": "non existant map",
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "324fb268-d3e7-4a9a-96d1-dcc6b2a38e46",
+        "name": "id command",
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "65f2ce21-313b-4d8b-8bb7-44ed54cac489",
+        "name": "robot commands",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "943d42b2-ee7e-4555-a6b4-ed92c3875617",
+        "name": "move",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands",
+              "move"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "bd5cd324-fcc4-4445-88d1-c429dc90c249",
+        "name": "new command",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n  \"name\": \"JUMP\",\r\n  \"isMoveCommand\": true,\r\n  \"description\": \"robot moves\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": []
+      },
+      {
+        "id": "347bb8b3-458f-42c3-ba9e-cbe005481d09",
+        "name": "update",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands",
+              "1"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n\"id\":1,\r\n\"name\":\"LEFT\",\r\n\"isMoveCommand\":true,\r\n\"description\":\"Turn robot left\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [],
+        "event": []
+      }
+    ],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "cd6031cc-d793-4102-9264-a36148e42134",
+      "name": "Task3.1p",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "id": "64c628c9-bb69-40ea-86e2-b9122d155bd4",
+    "values": []
+  },
+  "globals": {
+    "id": "decafeec-961c-4f71-8e81-c641db0970d9",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 10,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 10,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 10,
+        "pending": 0,
+        "failed": 10
+      },
+      "tests": {
+        "total": 10,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 0,
+      "responseMin": 0,
+      "responseMax": 0,
+      "responseSd": 0,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1773401263398,
+      "completed": 1773401264291
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 10,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "12ae8c2e-adb9-43c8-9d78-b0eda10f2152",
+          "httpRequestId": "79d34732-16c1-446e-97dd-b46258ecae9a"
+        },
+        "item": {
+          "id": "2859ff1d-f2a2-4784-9ac6-ba77bdfb8f62",
+          "name": "maps",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "maps"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "maps"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "e3ef3ab6-dc95-4329-b54d-3b8f0e93930c",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:5190",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "2859ff1d-f2a2-4784-9ac6-ba77bdfb8f62",
+        "requestError": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190
+        }
+      },
+      {
+        "cursor": {
+          "ref": "3aa56dd9-b42a-4f49-bf92-026fbe2919f2",
+          "length": 10,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "9ec95ad0-ff2b-4893-8c49-8a735b987ddd"
+        },
+        "item": {
+          "id": "f4a28e75-c0b1-444c-a4d0-7198d08658c2",
+          "name": "coordinate on the map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "id": "f4a28e75-c0b1-444c-a4d0-7198d08658c2",
+        "requestError": {}
+      },
+      {
+        "cursor": {
+          "ref": "dfbda107-2024-4fb6-b303-78757f80a8f6",
+          "length": 10,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "d058ce0d-6b7b-4da2-89e2-0080dad43fb1"
+        },
+        "item": {
+          "id": "eec6fa04-0733-4b3b-b23e-a1bfe8fc57f1",
+          "name": "outside map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "id": "eec6fa04-0733-4b3b-b23e-a1bfe8fc57f1",
+        "requestError": {}
+      },
+      {
+        "cursor": {
+          "ref": "a44cd007-26d6-4f37-bd4c-833ad9e6749b",
+          "length": 10,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "bf42e3c0-5c1d-488b-ad64-3a5c7d55e4b2"
+        },
+        "item": {
+          "id": "37a76e97-b4ea-432b-91a0-78b445da7fcb",
+          "name": "invalid coordinates",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "id": "37a76e97-b4ea-432b-91a0-78b445da7fcb",
+        "requestError": {}
+      },
+      {
+        "cursor": {
+          "ref": "0bfb97ac-8bcd-4784-92b4-43bee1dff535",
+          "length": 10,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "b8aa4145-7b5d-4ce9-a04e-f73e8027e113"
+        },
+        "item": {
+          "id": "34019739-7748-4be6-ac39-8054bcc9932f",
+          "name": "non existant map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "id": "34019739-7748-4be6-ac39-8054bcc9932f",
+        "requestError": {}
+      },
+      {
+        "cursor": {
+          "ref": "46f763d9-b5bd-46e9-8b4c-d08bb2068bbb",
+          "length": 10,
+          "cycles": 1,
+          "position": 5,
+          "iteration": 0,
+          "httpRequestId": "33d6af25-fb3e-4f9b-84e0-f23b55fe9dda"
+        },
+        "item": {
+          "id": "324fb268-d3e7-4a9a-96d1-dcc6b2a38e46",
+          "name": "id command",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "id": "324fb268-d3e7-4a9a-96d1-dcc6b2a38e46",
+        "requestError": {}
+      },
+      {
+        "cursor": {
+          "ref": "c5927a8c-fbd1-4502-887b-eafebb738311",
+          "length": 10,
+          "cycles": 1,
+          "position": 6,
+          "iteration": 0,
+          "httpRequestId": "ecd94cb8-c742-46d0-b8f1-2e0b92340d06"
+        },
+        "item": {
+          "id": "65f2ce21-313b-4d8b-8bb7-44ed54cac489",
+          "name": "robot commands",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "e350c128-6e09-4190-b2b2-5b352cbad5f4",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:5190",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "65f2ce21-313b-4d8b-8bb7-44ed54cac489",
+        "requestError": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190
+        }
+      },
+      {
+        "cursor": {
+          "ref": "3075c4bc-78a9-4aab-8a9e-dc5769e92b8d",
+          "length": 10,
+          "cycles": 1,
+          "position": 7,
+          "iteration": 0,
+          "httpRequestId": "c3313260-1910-459f-8ea4-da40e6c0dbff"
+        },
+        "item": {
+          "id": "943d42b2-ee7e-4555-a6b4-ed92c3875617",
+          "name": "move",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands",
+                "move"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands",
+              "move"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "b231eb91-e807-422f-8f6e-ff311692327e",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:5190",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "943d42b2-ee7e-4555-a6b4-ed92c3875617",
+        "requestError": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190
+        }
+      },
+      {
+        "cursor": {
+          "ref": "ad796465-fa03-4916-954f-f1c882d584af",
+          "length": 10,
+          "cycles": 1,
+          "position": 8,
+          "iteration": 0,
+          "httpRequestId": "7060fd61-bd9a-4d47-bd41-a4c9354ef946"
+        },
+        "item": {
+          "id": "bd5cd324-fcc4-4445-88d1-c429dc90c249",
+          "name": "new command",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"JUMP\",\r\n  \"isMoveCommand\": true,\r\n  \"description\": \"robot moves\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "16f4ab49-a6f7-4ae1-bdc6-106e7a736e27",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:5190",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n  \"name\": \"JUMP\",\r\n  \"isMoveCommand\": true,\r\n  \"description\": \"robot moves\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "id": "bd5cd324-fcc4-4445-88d1-c429dc90c249",
+        "requestError": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190
+        }
+      },
+      {
+        "cursor": {
+          "ref": "89d9e776-5533-4557-ab5c-24e6971e2312",
+          "length": 10,
+          "cycles": 1,
+          "position": 9,
+          "iteration": 0,
+          "httpRequestId": "56b3874a-b132-4f98-8c35-76dc2d76f090"
+        },
+        "item": {
+          "id": "347bb8b3-458f-42c3-ba9e-cbe005481d09",
+          "name": "update",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands",
+                "1"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\":1,\r\n\"name\":\"LEFT\",\r\n\"isMoveCommand\":true,\r\n\"description\":\"Turn robot left\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5190",
+            "path": [
+              "api",
+              "robot-commands",
+              "1"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "6b792d14-dd6b-41d3-9147-f5dec44d09c6",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:5190",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n\"id\":1,\r\n\"name\":\"LEFT\",\r\n\"isMoveCommand\":true,\r\n\"description\":\"Turn robot left\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "id": "347bb8b3-458f-42c3-ba9e-cbe005481d09",
+        "requestError": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190
+        }
+      }
+    ],
+    "transfers": {
+      "responseTotal": 0
+    },
+    "failures": [
+      {
+        "error": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190,
+          "name": "Error",
+          "message": "connect ECONNREFUSED 127.0.0.1:5190",
+          "stack": "Error: connect ECONNREFUSED 127.0.0.1:5190\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)",
+          "checksum": "edcdf95863d2437e2c728550544af186",
+          "id": "bf98cb45-e4e7-48bd-a5f8-70d8e31b643c",
+          "timestamp": 1773401263469,
+          "stacktrace": [
+            {
+              "fileName": "node:net",
+              "lineNumber": 1637,
+              "functionName": "TCPConnectWrap.afterConnect [as oncomplete]",
+              "typeName": "TCPConnectWrap",
+              "methodName": "afterConnect [as oncomplete]",
+              "columnNumber": 16,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "2859ff1d-f2a2-4784-9ac6-ba77bdfb8f62",
+          "name": "maps",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "maps"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "e3ef3ab6-dc95-4329-b54d-3b8f0e93930c",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "localhost:5190",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 10,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "12ae8c2e-adb9-43c8-9d78-b0eda10f2152",
+          "httpRequestId": "79d34732-16c1-446e-97dd-b46258ecae9a"
+        }
+      },
+      {
+        "error": {
+          "name": "Error",
+          "message": "runtime:extensions~request: request url is empty",
+          "stack": "Error: runtime:extensions~request: request url is empty\n    at Requester.request (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:421:26)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:156:37\n    at Requester.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:508:16)\n    at RequesterPool.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js:67:22)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:105:32\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:252:13\n    at wrapper (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:273:20)\n    at replenish (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:443:29)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:453:13\n    at eachOfLimit (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:479:36)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at eachOfSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:815:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at _asyncMap (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:245:16)\n    at mapSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:839:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)",
+          "checksum": "f72b9f2099074800c4fb78c943ca371e",
+          "id": "8b394feb-310a-4770-b4ca-7d3a4aabd3c0",
+          "timestamp": 1773401263525,
+          "stacktrace": [
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 421,
+              "functionName": "Requester.request",
+              "typeName": "Requester",
+              "methodName": "request",
+              "columnNumber": 26,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 156,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 37,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 508,
+              "functionName": "Requester.create",
+              "typeName": "Requester",
+              "methodName": "create",
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js",
+              "lineNumber": 67,
+              "functionName": "RequesterPool.create",
+              "typeName": "RequesterPool",
+              "methodName": "create",
+              "columnNumber": 22,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 105,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 252,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 273,
+              "functionName": "wrapper",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 20,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 443,
+              "functionName": "replenish",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 29,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 453,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 479,
+              "functionName": "eachOfLimit",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 36,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 815,
+              "functionName": "eachOfSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 245,
+              "functionName": "_asyncMap",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 839,
+              "functionName": "mapSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "f4a28e75-c0b1-444c-a4d0-7198d08658c2",
+          "name": "coordinate on the map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "3aa56dd9-b42a-4f49-bf92-026fbe2919f2",
+          "length": 10,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "9ec95ad0-ff2b-4893-8c49-8a735b987ddd"
+        }
+      },
+      {
+        "error": {
+          "name": "Error",
+          "message": "runtime:extensions~request: request url is empty",
+          "stack": "Error: runtime:extensions~request: request url is empty\n    at Requester.request (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:421:26)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:156:37\n    at Requester.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:508:16)\n    at RequesterPool.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js:67:22)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:105:32\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:252:13\n    at wrapper (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:273:20)\n    at replenish (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:443:29)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:453:13\n    at eachOfLimit (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:479:36)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at eachOfSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:815:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at _asyncMap (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:245:16)\n    at mapSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:839:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)",
+          "checksum": "f72b9f2099074800c4fb78c943ca371e",
+          "id": "a4b02afc-2469-4ca2-87c5-fc19482dd2e9",
+          "timestamp": 1773401263625,
+          "stacktrace": [
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 421,
+              "functionName": "Requester.request",
+              "typeName": "Requester",
+              "methodName": "request",
+              "columnNumber": 26,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 156,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 37,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 508,
+              "functionName": "Requester.create",
+              "typeName": "Requester",
+              "methodName": "create",
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js",
+              "lineNumber": 67,
+              "functionName": "RequesterPool.create",
+              "typeName": "RequesterPool",
+              "methodName": "create",
+              "columnNumber": 22,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 105,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 252,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 273,
+              "functionName": "wrapper",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 20,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 443,
+              "functionName": "replenish",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 29,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 453,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 479,
+              "functionName": "eachOfLimit",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 36,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 815,
+              "functionName": "eachOfSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 245,
+              "functionName": "_asyncMap",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 839,
+              "functionName": "mapSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "eec6fa04-0733-4b3b-b23e-a1bfe8fc57f1",
+          "name": "outside map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "dfbda107-2024-4fb6-b303-78757f80a8f6",
+          "length": 10,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "d058ce0d-6b7b-4da2-89e2-0080dad43fb1"
+        }
+      },
+      {
+        "error": {
+          "name": "Error",
+          "message": "runtime:extensions~request: request url is empty",
+          "stack": "Error: runtime:extensions~request: request url is empty\n    at Requester.request (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:421:26)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:156:37\n    at Requester.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:508:16)\n    at RequesterPool.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js:67:22)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:105:32\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:252:13\n    at wrapper (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:273:20)\n    at replenish (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:443:29)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:453:13\n    at eachOfLimit (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:479:36)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at eachOfSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:815:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at _asyncMap (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:245:16)\n    at mapSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:839:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)",
+          "checksum": "f72b9f2099074800c4fb78c943ca371e",
+          "id": "8628c1d5-8128-422d-b784-954fbd6d679e",
+          "timestamp": 1773401263708,
+          "stacktrace": [
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 421,
+              "functionName": "Requester.request",
+              "typeName": "Requester",
+              "methodName": "request",
+              "columnNumber": 26,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 156,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 37,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 508,
+              "functionName": "Requester.create",
+              "typeName": "Requester",
+              "methodName": "create",
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js",
+              "lineNumber": 67,
+              "functionName": "RequesterPool.create",
+              "typeName": "RequesterPool",
+              "methodName": "create",
+              "columnNumber": 22,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 105,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 252,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 273,
+              "functionName": "wrapper",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 20,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 443,
+              "functionName": "replenish",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 29,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 453,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 479,
+              "functionName": "eachOfLimit",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 36,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 815,
+              "functionName": "eachOfSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 245,
+              "functionName": "_asyncMap",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 839,
+              "functionName": "mapSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "37a76e97-b4ea-432b-91a0-78b445da7fcb",
+          "name": "invalid coordinates",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "a44cd007-26d6-4f37-bd4c-833ad9e6749b",
+          "length": 10,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "bf42e3c0-5c1d-488b-ad64-3a5c7d55e4b2"
+        }
+      },
+      {
+        "error": {
+          "name": "Error",
+          "message": "runtime:extensions~request: request url is empty",
+          "stack": "Error: runtime:extensions~request: request url is empty\n    at Requester.request (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:421:26)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:156:37\n    at Requester.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:508:16)\n    at RequesterPool.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js:67:22)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:105:32\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:252:13\n    at wrapper (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:273:20)\n    at replenish (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:443:29)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:453:13\n    at eachOfLimit (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:479:36)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at eachOfSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:815:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at _asyncMap (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:245:16)\n    at mapSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:839:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)",
+          "checksum": "f72b9f2099074800c4fb78c943ca371e",
+          "id": "57fe25ea-823e-414b-8ad3-0d2ab978dd79",
+          "timestamp": 1773401263775,
+          "stacktrace": [
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 421,
+              "functionName": "Requester.request",
+              "typeName": "Requester",
+              "methodName": "request",
+              "columnNumber": 26,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 156,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 37,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 508,
+              "functionName": "Requester.create",
+              "typeName": "Requester",
+              "methodName": "create",
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js",
+              "lineNumber": 67,
+              "functionName": "RequesterPool.create",
+              "typeName": "RequesterPool",
+              "methodName": "create",
+              "columnNumber": 22,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 105,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 252,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 273,
+              "functionName": "wrapper",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 20,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 443,
+              "functionName": "replenish",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 29,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 453,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 479,
+              "functionName": "eachOfLimit",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 36,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 815,
+              "functionName": "eachOfSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 245,
+              "functionName": "_asyncMap",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 839,
+              "functionName": "mapSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "34019739-7748-4be6-ac39-8054bcc9932f",
+          "name": "non existant map",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "0bfb97ac-8bcd-4784-92b4-43bee1dff535",
+          "length": 10,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "b8aa4145-7b5d-4ce9-a04e-f73e8027e113"
+        }
+      },
+      {
+        "error": {
+          "name": "Error",
+          "message": "runtime:extensions~request: request url is empty",
+          "stack": "Error: runtime:extensions~request: request url is empty\n    at Requester.request (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:421:26)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:156:37\n    at Requester.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js:508:16)\n    at RequesterPool.create (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js:67:22)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js:105:32\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:252:13\n    at wrapper (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:273:20)\n    at replenish (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:443:29)\n    at C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:453:13\n    at eachOfLimit (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:479:36)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at eachOfSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:815:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)\n    at _asyncMap (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:245:16)\n    at mapSeries (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:839:16)\n    at awaitable (C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js:212:32)",
+          "checksum": "f72b9f2099074800c4fb78c943ca371e",
+          "id": "c5e822cf-3fac-4a0a-a7b5-7a53bc087ac1",
+          "timestamp": 1773401263875,
+          "stacktrace": [
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 421,
+              "functionName": "Requester.request",
+              "typeName": "Requester",
+              "methodName": "request",
+              "columnNumber": 26,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 156,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 37,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester.js",
+              "lineNumber": 508,
+              "functionName": "Requester.create",
+              "typeName": "Requester",
+              "methodName": "create",
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\requester\\requester-pool.js",
+              "lineNumber": 67,
+              "functionName": "RequesterPool.create",
+              "typeName": "RequesterPool",
+              "methodName": "create",
+              "columnNumber": 22,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\postman-runtime\\lib\\runner\\extensions\\http-request.command.js",
+              "lineNumber": 105,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 252,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 273,
+              "functionName": "wrapper",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 20,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 443,
+              "functionName": "replenish",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 29,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 453,
+              "functionName": null,
+              "typeName": null,
+              "methodName": null,
+              "columnNumber": 13,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 479,
+              "functionName": "eachOfLimit",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 36,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 815,
+              "functionName": "eachOfSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 245,
+              "functionName": "_asyncMap",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 839,
+              "functionName": "mapSeries",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 16,
+              "native": false
+            },
+            {
+              "fileName": "C:\\Users\\User\\AppData\\Roaming\\npm\\node_modules\\newman\\node_modules\\async\\dist\\async.js",
+              "lineNumber": 212,
+              "functionName": "awaitable",
+              "typeName": "Object",
+              "methodName": null,
+              "columnNumber": 32,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "324fb268-d3e7-4a9a-96d1-dcc6b2a38e46",
+          "name": "id command",
+          "request": {
+            "url": {
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "46f763d9-b5bd-46e9-8b4c-d08bb2068bbb",
+          "length": 10,
+          "cycles": 1,
+          "position": 5,
+          "iteration": 0,
+          "httpRequestId": "33d6af25-fb3e-4f9b-84e0-f23b55fe9dda"
+        }
+      },
+      {
+        "error": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190,
+          "name": "Error",
+          "message": "connect ECONNREFUSED 127.0.0.1:5190",
+          "stack": "Error: connect ECONNREFUSED 127.0.0.1:5190\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)",
+          "checksum": "edcdf95863d2437e2c728550544af186",
+          "id": "56edb7e6-1b0e-47bb-85fe-f2c7271fc46f",
+          "timestamp": 1773401263980,
+          "stacktrace": [
+            {
+              "fileName": "node:net",
+              "lineNumber": 1637,
+              "functionName": "TCPConnectWrap.afterConnect [as oncomplete]",
+              "typeName": "TCPConnectWrap",
+              "methodName": "afterConnect [as oncomplete]",
+              "columnNumber": 16,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "65f2ce21-313b-4d8b-8bb7-44ed54cac489",
+          "name": "robot commands",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "e350c128-6e09-4190-b2b2-5b352cbad5f4",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "localhost:5190",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "c5927a8c-fbd1-4502-887b-eafebb738311",
+          "length": 10,
+          "cycles": 1,
+          "position": 6,
+          "iteration": 0,
+          "httpRequestId": "ecd94cb8-c742-46d0-b8f1-2e0b92340d06"
+        }
+      },
+      {
+        "error": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190,
+          "name": "Error",
+          "message": "connect ECONNREFUSED 127.0.0.1:5190",
+          "stack": "Error: connect ECONNREFUSED 127.0.0.1:5190\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)",
+          "checksum": "edcdf95863d2437e2c728550544af186",
+          "id": "279024a3-f431-4bab-8ec0-9319c283689a",
+          "timestamp": 1773401264080,
+          "stacktrace": [
+            {
+              "fileName": "node:net",
+              "lineNumber": 1637,
+              "functionName": "TCPConnectWrap.afterConnect [as oncomplete]",
+              "typeName": "TCPConnectWrap",
+              "methodName": "afterConnect [as oncomplete]",
+              "columnNumber": 16,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "943d42b2-ee7e-4555-a6b4-ed92c3875617",
+          "name": "move",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands",
+                "move"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "b231eb91-e807-422f-8f6e-ff311692327e",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "localhost:5190",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "3075c4bc-78a9-4aab-8a9e-dc5769e92b8d",
+          "length": 10,
+          "cycles": 1,
+          "position": 7,
+          "iteration": 0,
+          "httpRequestId": "c3313260-1910-459f-8ea4-da40e6c0dbff"
+        }
+      },
+      {
+        "error": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190,
+          "name": "Error",
+          "message": "connect ECONNREFUSED 127.0.0.1:5190",
+          "stack": "Error: connect ECONNREFUSED 127.0.0.1:5190\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)",
+          "checksum": "edcdf95863d2437e2c728550544af186",
+          "id": "80fbc80a-87fc-4a9f-8fd1-04b1f37f6203",
+          "timestamp": 1773401264163,
+          "stacktrace": [
+            {
+              "fileName": "node:net",
+              "lineNumber": 1637,
+              "functionName": "TCPConnectWrap.afterConnect [as oncomplete]",
+              "typeName": "TCPConnectWrap",
+              "methodName": "afterConnect [as oncomplete]",
+              "columnNumber": 16,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "bd5cd324-fcc4-4445-88d1-c429dc90c249",
+          "name": "new command",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "16f4ab49-a6f7-4ae1-bdc6-106e7a736e27",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "localhost:5190",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"JUMP\",\r\n  \"isMoveCommand\": true,\r\n  \"description\": \"robot moves\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "ad796465-fa03-4916-954f-f1c882d584af",
+          "length": 10,
+          "cycles": 1,
+          "position": 8,
+          "iteration": 0,
+          "httpRequestId": "7060fd61-bd9a-4d47-bd41-a4c9354ef946"
+        }
+      },
+      {
+        "error": {
+          "errno": -4078,
+          "code": "ECONNREFUSED",
+          "syscall": "connect",
+          "address": "127.0.0.1",
+          "port": 5190,
+          "name": "Error",
+          "message": "connect ECONNREFUSED 127.0.0.1:5190",
+          "stack": "Error: connect ECONNREFUSED 127.0.0.1:5190\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)",
+          "checksum": "edcdf95863d2437e2c728550544af186",
+          "id": "d4c5b6e1-41fc-47b4-ad04-7270c46c9bea",
+          "timestamp": 1773401264262,
+          "stacktrace": [
+            {
+              "fileName": "node:net",
+              "lineNumber": 1637,
+              "functionName": "TCPConnectWrap.afterConnect [as oncomplete]",
+              "typeName": "TCPConnectWrap",
+              "methodName": "afterConnect [as oncomplete]",
+              "columnNumber": 16,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "347bb8b3-458f-42c3-ba9e-cbe005481d09",
+          "name": "update",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5190",
+              "path": [
+                "api",
+                "robot-commands",
+                "1"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "system": true
+              },
+              {
+                "key": "User-Agent",
+                "value": "PostmanRuntime/7.39.1",
+                "system": true
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "system": true
+              },
+              {
+                "key": "Cache-Control",
+                "value": "no-cache",
+                "system": true
+              },
+              {
+                "key": "Postman-Token",
+                "value": "6b792d14-dd6b-41d3-9147-f5dec44d09c6",
+                "system": true
+              },
+              {
+                "key": "Host",
+                "value": "localhost:5190",
+                "system": true
+              },
+              {
+                "key": "Accept-Encoding",
+                "value": "gzip, deflate, br",
+                "system": true
+              },
+              {
+                "key": "Connection",
+                "value": "keep-alive",
+                "system": true
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"id\":1,\r\n\"name\":\"LEFT\",\r\n\"isMoveCommand\":true,\r\n\"description\":\"Turn robot left\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "cursor": {
+          "ref": "89d9e776-5533-4557-ab5c-24e6971e2312",
+          "length": 10,
+          "cycles": 1,
+          "position": 9,
+          "iteration": 0,
+          "httpRequestId": "56b3874a-b132-4f98-8c35-76dc2d76f090"
+        }
+      }
+    ],
+    "error": null
+  }
+}

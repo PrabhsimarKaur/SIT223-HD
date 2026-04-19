@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "944c5d7a-5be5-4c33-b4fe-fe4695e58d7c",
+    "name": "SIT331",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52790459",
+    "_collection_link": "https://go.postman.co/collection/52790459-944c5d7a-5be5-4c33-b4fe-fe4695e58d7c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5046",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5046"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "robot-map",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5046/robot-map",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5046",
+          "path": [
+            "robot-map"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update map size",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot-map/1",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot-map",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "place robot",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/place?x=1&y=2&direction=SOUTH",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "place"
+          ],
+          "query": [
+            {
+              "key": "x",
+              "value": "1"
+            },
+            {
+              "key": "y",
+              "value": "2"
+            },
+            {
+              "key": "direction",
+              "value": "SOUTH"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "move robot",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/move",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "turn left",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/left",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "left"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "turn right",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/right",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "right"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "robot report",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/report",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "report"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "error test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{api-host}}:{{port}}/robot/invalid",
+          "protocol": "http",
+          "host": [
+            "{{api-host}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "robot",
+            "invalid"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

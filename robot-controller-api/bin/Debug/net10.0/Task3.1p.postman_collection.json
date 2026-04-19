@@ -1,0 +1,177 @@
+{
+  "info": {
+    "_postman_id": "cd6031cc-d793-4102-9264-a36148e42134",
+    "name": "Task3.1p",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52790459",
+    "_collection_link": "https://go.postman.co/collection/52790459-cd6031cc-d793-4102-9264-a36148e42134?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "maps",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5190/api/maps",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5190",
+          "path": [
+            "api",
+            "maps"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "coordinate on the map",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "outside map",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "invalid coordinates",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "non existant map",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "id command",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "robot commands",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5190/api/robot-commands",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5190",
+          "path": [
+            "api",
+            "robot-commands"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "move",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5190/api/robot-commands/move",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5190",
+          "path": [
+            "api",
+            "robot-commands",
+            "move"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "new command",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"JUMP\",\r\n  \"isMoveCommand\": true,\r\n  \"description\": \"robot moves\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5190/api/robot-commands",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5190",
+          "path": [
+            "api",
+            "robot-commands"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"id\":1,\r\n\"name\":\"LEFT\",\r\n\"isMoveCommand\":true,\r\n\"description\":\"Turn robot left\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5190/api/robot-commands/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5190",
+          "path": [
+            "api",
+            "robot-commands",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
