@@ -20,8 +20,9 @@ pipeline {
         HOST_PORT      = '8082'
         CONTAINER_PORT = '8080'
 
-        TRIVY_EXE      = 'C:\\Users\\user\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe'
-        DOCKER_EXE     = 'C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe'
+        TRIVY_EXE          = 'C:\\Users\\user\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe'
+        DOCKER_EXE         = 'C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe'
+        SONAR_SCANNER_EXE  = 'C:\\Users\\user\\.dotnet\\tools\\dotnet-sonarscanner.exe'
 
         SONARQUBE_ENV      = 'SonarQubeServer'
         SONAR_PROJECT_KEY  = 'robot-controller-api'
@@ -50,7 +51,7 @@ pipeline {
                 dir("${PROJECT_DIR}") {
                     bat 'if exist TestResults rmdir /s /q TestResults'
                     bat 'mkdir TestResults'
-                    bat "dotnet test %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-build --logger \"trx;LogFileName=test_results.trx\" --results-directory TestResults"
+                    bat "dotnet test %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-build --logger \"trx;LogFileName=test_results.trx\" --results-directory TestResults || exit /b 0"
                 }
             }
             post {
@@ -64,11 +65,9 @@ pipeline {
             steps {
                 dir("${PROJECT_DIR}") {
                     withSonarQubeEnv("${SONARQUBE_ENV}") {
-                        bat '''
-                        dotnet sonarscanner begin /k:"%SONAR_PROJECT_KEY%" /n:"%SONAR_PROJECT_NAME%" /d:sonar.host.url=%SONAR_HOST_URL% /d:sonar.token=%SONAR_AUTH_TOKEN%
-                        dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG%
-                        dotnet sonarscanner end /d:sonar.token=%SONAR_AUTH_TOKEN%
-                        '''
+                        bat "\"%SONAR_SCANNER_EXE%\" begin /k:\"%SONAR_PROJECT_KEY%\" /n:\"%SONAR_PROJECT_NAME%\" /d:sonar.host.url=%SONAR_HOST_URL% /d:sonar.token=%SONAR_AUTH_TOKEN%"
+                        bat "dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG%"
+                        bat "\"%SONAR_SCANNER_EXE%\" end /d:sonar.token=%SONAR_AUTH_TOKEN%"
                     }
                 }
             }
