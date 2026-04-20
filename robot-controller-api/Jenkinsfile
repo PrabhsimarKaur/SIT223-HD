@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        PROJECT_NAME   = 'robot-controller-api'
+        PROJECT_DIR    = 'robot-controller-api'
         SOLUTION_FILE  = 'robot-controller-api.sln'
         PROJECT_FILE   = 'robot-controller-api.csproj'
         BUILD_CONFIG   = 'Release'
@@ -17,7 +17,7 @@ pipeline {
         FULL_IMAGE     = "${IMAGE_NAME}:${IMAGE_TAG}"
 
         CONTAINER_NAME = 'robot-api-container'
-        HOST_PORT      = '8081'
+        HOST_PORT      = '8082'
         CONTAINER_PORT = '8080'
 
         TRIVY_EXE      = 'C:\\Users\\user\\AppData\\Local\\Microsoft\\WinGet\\Links\\trivy.exe'
@@ -30,60 +30,61 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-                bat 'echo Source code checked out successfully.'
-            }
-        }
-
         stage('Build') {
             steps {
-                bat "dotnet restore %SOLUTION_FILE%"
-                bat "dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-restore"
-                bat "dotnet publish %PROJECT_FILE% -c %BUILD_CONFIG% -o publish"
+                dir("${PROJECT_DIR}") {
+                    bat "dotnet restore %SOLUTION_FILE%"
+                    bat "dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-restore"
+                    bat "dotnet publish %PROJECT_FILE% -c %BUILD_CONFIG% -o publish"
+                }
             }
             post {
                 success {
-                    archiveArtifacts artifacts: 'publish/**', fingerprint: true
+                    archiveArtifacts artifacts: 'robot-controller-api/publish/**', fingerprint: true
                 }
             }
         }
 
         stage('Test') {
             steps {
-                bat 'if exist TestResults rmdir /s /q TestResults'
-                bat 'mkdir TestResults'
-                bat "dotnet test %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-build --logger \"trx;LogFileName=test_results.trx\" --results-directory TestResults"
+                dir("${PROJECT_DIR}") {
+                    bat 'if exist TestResults rmdir /s /q TestResults'
+                    bat 'mkdir TestResults'
+                    bat "dotnet test %SOLUTION_FILE% --configuration %BUILD_CONFIG% --no-build --logger \"trx;LogFileName=test_results.trx\" --results-directory TestResults"
+                }
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'TestResults/**/*.trx', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'robot-controller-api/TestResults/**/*.trx', allowEmptyArchive: true
                 }
             }
         }
 
         stage('Code Quality') {
             steps {
-                withSonarQubeEnv("${SONARQUBE_ENV}") {
-                    bat """
-                    dotnet sonarscanner begin /k:"%SONAR_PROJECT_KEY%" /n:"%SONAR_PROJECT_NAME%" /d:sonar.host.url=%SONAR_HOST_URL% /d:sonar.token=%SONAR_AUTH_TOKEN%
-                    dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG%
-                    dotnet sonarscanner end /d:sonar.token=%SONAR_AUTH_TOKEN%
-                    """
+                dir("${PROJECT_DIR}") {
+                    withSonarQubeEnv("${SONARQUBE_ENV}") {
+                        bat '''
+                        dotnet sonarscanner begin /k:"%SONAR_PROJECT_KEY%" /n:"%SONAR_PROJECT_NAME%" /d:sonar.host.url=%SONAR_HOST_URL% /d:sonar.token=%SONAR_AUTH_TOKEN%
+                        dotnet build %SOLUTION_FILE% --configuration %BUILD_CONFIG%
+                        dotnet sonarscanner end /d:sonar.token=%SONAR_AUTH_TOKEN%
+                        '''
+                    }
                 }
             }
         }
 
         stage('Security') {
             steps {
-                bat "\"%TRIVY_EXE%\" fs --severity HIGH,CRITICAL --format table --output trivy-filesystem-report.txt ."
-                bat "\"%DOCKER_EXE%\" build -t %FULL_IMAGE% ."
-                bat "\"%TRIVY_EXE%\" image --severity HIGH,CRITICAL --format table --output trivy-image-report.txt %FULL_IMAGE%"
+                dir("${PROJECT_DIR}") {
+                    bat "\"%TRIVY_EXE%\" fs --severity HIGH,CRITICAL --format table --output trivy-filesystem-report.txt ."
+                    bat "\"%DOCKER_EXE%\" build -t %FULL_IMAGE% ."
+                    bat "\"%TRIVY_EXE%\" image --severity HIGH,CRITICAL --format table --output trivy-image-report.txt %FULL_IMAGE%"
+                }
             }
             post {
                 always {
-                    archiveArtifacts artifacts: 'trivy-filesystem-report.txt, trivy-image-report.txt', allowEmptyArchive: true
+                    archiveArtifacts artifacts: 'robot-controller-api/trivy-filesystem-report.txt, robot-controller-api/trivy-image-report.txt', allowEmptyArchive: true
                 }
             }
         }
