@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.AssemblyInfo.cs
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Desktop\SIT223\task9\robot-controller-api\obj\Debug\net8.0\robot-controller-api.sourcelink.json
